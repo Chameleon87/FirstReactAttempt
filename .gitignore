@@ -5,6 +5,7 @@ __pycache__/
 local_settings
 db.sqlite3
 env
+.DS_Store
 
 # C extensions
 *.so
