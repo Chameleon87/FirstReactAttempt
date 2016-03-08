@@ -4,6 +4,7 @@ from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
 from rest_framework import status, generics
 from post.models import Post
+from post.serializers import PostSerializer
 
 # Create your views here.
 def post(request, post_id):
