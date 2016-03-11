@@ -21,7 +21,7 @@ var AddPost = React.createClass({
       var date = new Date();
       date = date.toISOString();
 
-      var sendData = {author: "", tags: $('#addPostModalTags').val(), title: $('#addNewsModalTitle').val(), article: $('addNewsModalArticle').val(), date: date};
+      var sendData = {author: "", tags: $('#addPostModalTags').val(), title: $('#addPostModalTitle').val(), article: $('addPostModalArticle').val(), date: date};
 
       $.ajax({
         url: 'http://127.0.0.1/post/api/',
@@ -38,7 +38,7 @@ var AddPost = React.createClass({
     },
     render: function() {
       return (
-        var style = { display: this.state.showModal, top: '50px' };
+        var style = { display: this.state.showModal };
         var close = <button className="btn btn-default" onClick={this.closeModal}>Close</button>;
         var addPostBody = <div>
                               <label>Title:</label>
@@ -53,7 +53,7 @@ var AddPost = React.createClass({
                               <button style={{marginTop:'20px'}} className="btn btn-primary" onClick={this.addPost}>Add Post</button>
                           </div>
         <div>
-          <AddPostModal title="Add a new post" close= {close} action= {action} body={AddPostBody} />
+          <AddPostModal title="Add a new post" close= {close} body={AddPostBody} />
         </div>
       )
   }
@@ -72,7 +72,6 @@ var AddPostModal = React.createClass({
             <div className="modal-body">
               {this.props.body}
               <br />
-              {this.props.action}
             </div>
           </div>
         </div>
