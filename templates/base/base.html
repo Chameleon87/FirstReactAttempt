@@ -1,15 +1,13 @@
 <html>
-    {% load staticfiles %}
-    <head>
-        <title></title>
-    </head>
+{% load staticfiles %}
+<head>
+    <script src="https://fb.me/react-0.13.3.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+    <script type="text/JSX" src="{% static 'js/navReact.jsx' %}"></script>
+</head>
 
-    <body>
-      <div id="addPost"></div>
-        {% block content %}
+<body>
+    {% block content %}
 
-        {% endblock %}
-        <script src="https://fb.me/react-0.13.3.js"></script>
-        <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
-        <script type="text/JSX" src="{% static 'js/navReact.jsx' %}"></script>
-    </body>
+    {% endblock %}
+</body>
