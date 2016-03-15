@@ -81,6 +81,6 @@ var AddPostModal = React.createClass({
 });
 
 React.render(
-  <Addpost/>,
+  <Addpost />,
   document.getElementById('addPost')
 )

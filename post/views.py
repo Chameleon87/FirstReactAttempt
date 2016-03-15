@@ -8,6 +8,9 @@ from post.models import Post
 from post.serializers import PostSerializer
 
 # Create your views here.
+def index(request):
+    return render(request, 'index.html')
+
 def post(request, post_id):
     return render(request, 'post.html', {'id': post_id})
 
